@@ -12,16 +12,19 @@ namespace DuckPatterns
 
     public void simulate()
     {
-      var mallard = new MallardDuck();
-      var red = new RedheadDuck();
-      var call = new DuckCall();
-      var rubber = new RubberDuck();
+      var mallard = new QuakCounter(new MallardDuck());
+      var red = new QuakCounter(new RedheadDuck());
+      var call = new QuakCounter(new DuckCall());
+      var rubber = new QuakCounter(new RubberDuck());
+      var gooseDuck = new GooseAdapter(new Goose());
       Console.WriteLine("Duck Simulator");
 
       simulate(mallard);
       simulate(red);
       simulate(call);
       simulate(rubber);
+      simulate(gooseDuck);
+      Console.WriteLine(string.Format("The ducks quaked {0} times.",QuakCounter.QuackCount));
     }
 
     public void simulate(IQuackable duck)

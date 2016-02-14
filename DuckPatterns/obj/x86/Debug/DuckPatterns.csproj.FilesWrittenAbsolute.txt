@@ -1,0 +1,5 @@
+/home/zverrr/Mono/PatternsInExamples/DuckPatterns/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/zverrr/Mono/PatternsInExamples/DuckPatterns/bin/Debug/DuckPatterns.exe.mdb
+/home/zverrr/Mono/PatternsInExamples/DuckPatterns/bin/Debug/DuckPatterns.exe
+/home/zverrr/Mono/PatternsInExamples/DuckPatterns/obj/x86/Debug/DuckPatterns.exe
+/home/zverrr/Mono/PatternsInExamples/DuckPatterns/obj/x86/Debug/DuckPatterns.exe.mdb

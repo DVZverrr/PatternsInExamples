@@ -1,8 +1,11 @@
-﻿<Properties StartupItem="DuckPatterns/DuckPatterns.csproj">
+﻿<Properties StartupItem="DuckPatterns/DuckPatterns.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="DuckPatterns/Program.cs">
     <Files>
-      <File FileName="DuckPatterns/Program.cs" Line="1" Column="1" />
+      <File FileName="DuckPatterns/Program.cs" Line="27" Column="25" />
+      <File FileName="DuckPatterns/DuckClasses.cs" Line="49" Column="31" />
+      <File FileName="DuckPatterns/IQuackable.cs" Line="1" Column="1" />
+      <File FileName="DuckPatterns/Properties/QuakCounter.cs" Line="22" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DuckPatterns
 {
@@ -33,5 +34,32 @@ namespace DuckPatterns
       Console.WriteLine("Squeak");
     }
   }
+
+  public class Goose 
+  {
+    public void honk()
+    {
+      Console.WriteLine("Honk");
+    }
+  }
+
+  /// <summary>
+  /// Goose adapter.
+  /// </summary>
+  public class GooseAdapter : IQuackable
+  {
+    private Goose _goose;
+
+    public GooseAdapter (Goose goose)
+    {
+      _goose = goose;
+    }
+
+    public void quack()
+    {
+      _goose.honk ();
+    }
+  }
+
 }
 
