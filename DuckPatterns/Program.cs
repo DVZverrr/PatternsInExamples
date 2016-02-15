@@ -6,16 +6,17 @@ namespace DuckPatterns
   {
     public static void Main (string[] args)
     {
+      var duckFactory = new CountingDuckFactory();
       var ds = new DuckSimulator();
-      ds.simulate();
+      ds.simulate(duckFactory);
     }
 
-    public void simulate()
+    public void simulate(AbstractDuckFactory duckFactory)
     {
-      var mallard = new QuakCounter(new MallardDuck());
-      var red = new QuakCounter(new RedheadDuck());
-      var call = new QuakCounter(new DuckCall());
-      var rubber = new QuakCounter(new RubberDuck());
+      var mallard = duckFactory.createMallardDuck();
+      var red = duckFactory.createRedheadDuck();
+      var call = duckFactory.createDuckCall();
+      var rubber = duckFactory.createRubberDuck();
       var gooseDuck = new GooseAdapter(new Goose());
       Console.WriteLine("Duck Simulator");
 

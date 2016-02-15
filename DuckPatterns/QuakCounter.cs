@@ -17,7 +17,7 @@ namespace DuckPatterns
       QuackCount = 0;
     }
 
-    public void quack()
+    public void quack() 
     {
       _duck.quack();
       QuackCount++;
