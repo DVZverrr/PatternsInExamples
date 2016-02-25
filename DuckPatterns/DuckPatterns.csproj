@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -39,6 +40,7 @@
     <Compile Include="IQuackable.cs" />
     <Compile Include="QuakCounter.cs" />
     <Compile Include="DuckFactory.cs" />
+    <Compile Include="Flock.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
