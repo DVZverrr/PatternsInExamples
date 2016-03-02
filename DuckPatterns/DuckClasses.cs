@@ -3,35 +3,43 @@ using System.Collections.Generic;
 
 namespace DuckPatterns
 {
-  public class MallardDuck : IQuackable
+  public class MallardDuck : QuackObservable, IQuackable
   {
+    public string Name { get{return "MallardDuck";} }
     public void quack()
-    {
+    { 
       Console.WriteLine("Quack");
+      OnQuackHappend(Name);
     }
   }
 
-  public class RedheadDuck : IQuackable
+  public class RedheadDuck : QuackObservable, IQuackable
   {
+    public string Name { get{return "RedheadDuck";} }
     public void quack()
     {
       Console.WriteLine("Quack");
+      OnQuackHappend(Name);
     }
   }
 
-  public class DuckCall : IQuackable
+  public class DuckCall : QuackObservable, IQuackable
   {
+    public string Name { get{return "DuckCall";} }
     public void quack()
     {
       Console.WriteLine("Kwack");
+      OnQuackHappend(Name);
     }
   }
 
-  public class RubberDuck : IQuackable
+  public class RubberDuck : QuackObservable, IQuackable
   {
+    public string Name { get{return "RubberDuck";} }
     public void quack()
     {
       Console.WriteLine("Squeak");
+      OnQuackHappend(Name);
     }
   }
 
@@ -46,7 +54,7 @@ namespace DuckPatterns
   /// <summary>
   /// Goose adapter.
   /// </summary>
-  public class GooseAdapter : IQuackable
+  public class GooseAdapter : QuackObservable, IQuackable
   {
     private Goose _goose;
 
@@ -54,10 +62,11 @@ namespace DuckPatterns
     {
       _goose = goose;
     }
-
+    public string Name { get{return "GooseAdapter";} }
     public void quack()
     {
-      _goose.honk ();
+      _goose.honk();
+      OnQuackHappend(Name);
     }
   }
 

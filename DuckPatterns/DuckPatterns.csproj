@@ -41,6 +41,7 @@
     <Compile Include="QuakCounter.cs" />
     <Compile Include="DuckFactory.cs" />
     <Compile Include="Flock.cs" />
+    <Compile Include="QuackObservable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

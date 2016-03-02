@@ -27,6 +27,7 @@ namespace DuckPatterns
 
       var mallardFlock = new Flock();
       var mallardOne = duckFactory.createMallardDuck();
+      mallardOne.QuackHappend += QuackHandler;
       var mallardTwo = duckFactory.createMallardDuck();
       var mallardThree = duckFactory.createMallardDuck();
       var mallardFour = duckFactory.createMallardDuck();
@@ -34,9 +35,9 @@ namespace DuckPatterns
       mallardFlock.Add(mallardTwo);
       mallardFlock.Add(mallardThree);
       mallardFlock.Add(mallardFour);
-
+      mallardFlock.QuackHappend += QuackHandler;
       flock.Add(mallardFlock);
-
+      flock.QuackHappend+= QuackHandler;
       Console.WriteLine("Duck Simulator: Whole ducks");
       simulate(flock);
       Console.WriteLine("Duck Simulator: Mallard only ducks");
@@ -47,6 +48,11 @@ namespace DuckPatterns
     public void simulate(IQuackable duck)
     {
       duck.quack();
+    }
+
+    public void QuackHandler(string duckName)
+    {
+      Console.WriteLine(string.Format("Observer of {0}",duckName));
     }
   }
 }
